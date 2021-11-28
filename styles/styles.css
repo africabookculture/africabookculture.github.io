@@ -456,19 +456,12 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-  /* .home #main {
-    max-height: 35vh;
-    background-position: top center;
+  .home #main {
+    /* max-height: 25vh; */
   }
-  .home #main h2 {
-    background-color: black;
-    opacity: 0.7;
-    color: white;
-    padding: 3px;
-  } */
 
   .feature-image header {
-    background-size: 100% auto;
+    background-size: cover;
   }
 }
 
