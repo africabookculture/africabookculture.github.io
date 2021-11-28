@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<main class="home">
+
+{%- if site.data.settings.header_feature_image -%}
+
+<article id="page-content" class="feature-image">
+  <header id="main" style="background-image: url('{{ site.data.settings.header_feature_image | relative_url }}');">
+  {%- if site.data.settings.header_text -%}
+    <h1 style="color:{{ site.data.settings.header_text_color }};"> {{ site.data.settings.header_text }} </h1>
+  {%- endif -%}
+  {%- if site.data.settings.description -%}
+    <h2 style="color:{{ site.data.settings.header_text_color }};"> {{ site.data.settings.description }} </h2>
+  {%- endif -%}
+</header>
+</article>
+{%- endif -%}
+
+{%- include homepageitems.html -%}
+
+</main>

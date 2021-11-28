@@ -1,0 +1,32 @@
+<div class="posts">
+
+    {%- assign items = site.events | sort: 'eventdate' -%}
+      {%- for event in items limit:{{include.range}} -%}
+      <div class="post-teaser">
+          <span>
+            <header>
+              <h1>
+                <a aria-label="{{ event.title }}" class="post-link" href="{{ event.url | relative_url }}">
+                  {{ event.title }}
+                </a>
+              </h1>
+              {%- if event.eventdate -%}
+              <p class="meta">
+                Event date: {{ event.eventdate | date: "%B %-d, %Y" }}
+              </p>
+      {%- endif -%}
+            </header>
+            <div class="excerpt">
+                <!-- {% if film.still %}
+                  <img class="thumb" src="{{ film.still | replace: '../uploads', '/uploads' }}" alt="{{ film.title }}" />
+                {% endif %} -->
+                {{ event.excerpt }}
+                <span class="permalink">
+                  <a aria-label="{{ event.title }}" class="post-link" href="{{ event.url | relative_url }}">Read more <i class="fa fa-caret-right fa-2x"></i></a>
+                </span>
+            </div>
+        </span>
+      </div>
+      {% endfor %}
+  </div>
+  

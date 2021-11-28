@@ -1,0 +1,12 @@
+title: Africa Book Culture
+description:
+header_text: Africa Book Culture
+header_text_color: "#ffffff"
+footer_text: Copyright 2021
+header_feature_image: ../uploads/bannerimage.jpg
+bannerheight: "25vmax"
+gridlayout: true
+logo:
+favicon: /uploads/favicon.ico
+upzoom: true
+fixednavbar: true

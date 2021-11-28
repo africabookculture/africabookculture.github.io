@@ -1,0 +1,11 @@
+<div class="homepage">
+
+  {%- assign items = site.homepageitems | sort: 'title' -%}
+    {%- for homepageitem in items limit:2 -%}
+    <section class="{{homepageitem.position}}">
+          <div class="home-content">
+              {{ homepageitem.content | replace: "../uploads", "/uploads" }}
+          </div>
+    </section>
+    {% endfor %}
+</div>

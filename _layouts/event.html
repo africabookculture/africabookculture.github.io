@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article id="page-content">
+  <header id="main">
+      <h1 class="title">{{ page.title }}</h1>
+      {%- if page.eventdate -%}
+        <p class="meta">
+        Event date: {{ page.eventdate | date: "%B %-d, %Y" }}
+        </p>
+      {%- endif -%}
+  </header>
+  <section class="post-content">
+    <section class="details">
+      {{ content | replace: "../uploads", "/uploads" }}
+    </section>
+  </section>
+  <!-- Social media shares -->
+  {%- include share_buttons.html -%}
+   <!-- Tag list -->
+  {%- capture tag_list %}{{ page.tags | join: "|"}}{% endcapture -%}
+  {%- include tags_list.html tags=tag_list -%}
+
+</article>
