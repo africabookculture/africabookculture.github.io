@@ -2,14 +2,14 @@ backend:
   name: github
   repo: publisha/africabookculture # Path to your GitHub repository
   branch: master # Branch to update (master by default)
-  site_domain: africabookculture.netlify.app #Your site on netlify
+  site_domain: https://www.publisha.org/africabookculture/ #Your site on netlify
   use_graphql: true
 
 local_backend: true
 publish_mode: editorial_workflow
 show_preview_links: true
-display_url: https://www.africabookculture.org
-logo_url: https://www.africabookculture.org/uploads/logotype.png
+display_url: https://www.publisha.org/africabookculture/
+logo_url: https://www.publisha.org/africabookculture/uploads/logotype.png
 
 # Do NOT edit below this line unless you want to change the home page
 

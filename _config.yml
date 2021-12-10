@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: ''  #leave this alone
-url: "https://africabookculture.netlify.app"   #change this to yours
+url: "https://www.publisha.org/africabookculture/"   #change this to yours
 repository: publisha/africabookculture
 # twitter_username: pageboy  #change to your own twitter account
 lang: en_gb
