@@ -17,6 +17,56 @@ media_folder: "uploads" # Media files will be stored in the repo under /uploads
 public_folder: "../uploads"
 
 collections:
+  - name: "news" # Used in routes, e.g., /admin/collections/blog
+    label: "News" # Used in the UI
+    label_singular: "Item"
+    folder: "_news/" # The path to the folder where the documents are stored
+    editor:
+      preview: false
+    description: "These are your existing news items. Click -New Item- to create a new post."
+    create: true # Allow users to create new documents in this collection
+    media_folder: "/uploads"
+    public_folder: "../uploads"
+    summary: "{{title}} - {{day}}/{{month}}/{{year}}"
+    preview_path: "{{year}}/{{month}}/{{day}}/{{title}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "hidden",
+          default: "news",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          hint: "This is what determines the order on the news page with the latest on the top.",
+        }
+      - {
+          label: "Main Text",
+          name: "body",
+          widget: "markdown",
+          buttons:
+            [
+              bold,
+              italic,
+              link,
+              heading-one,
+              heading-two,
+              heading-three,
+              heading-four,
+              heading-five,
+              heading-six,
+              quote,
+              bulleted-list,
+              numbered-list,
+            ],
+          hint: "You can type straight into this field and use the toolbar to select styles. You can also use markdown directly when you switch this off. In markdown mode, you can also add HTML. Only the first 50 words will show on the news listing page.",
+        }
+
   - name: "events"
     label: "Events" # Used in the UI
     label_singular: "Event"
@@ -149,6 +199,42 @@ collections:
           widget: "boolean",
           default: false,
           hint: "If this is switched on, the link will show on the menubar to the right.",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "page"
+
+  - name: "network"
+    label: "Network" # Used in the UI
+    label_singular: "Network Page"
+    description: "These are seperate pages. Not date ordered, but simply available from the network menu."
+    folder: "_network" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    delete: false
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/uploads"
+    public_folder: "../uploads"
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Subtitle",
+          name: "subtitle",
+          widget: "string",
+          required: false,
+          hint: "This will show under the heading for the page.",
+        }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Show on the menu?",
+          name: "show",
+          widget: "boolean",
+          default: false,
+          hint: "If this is switched on, the link will show on the menubar under the Network menu.",
         }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Layout"
