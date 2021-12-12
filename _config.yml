@@ -1,7 +1,7 @@
 # SITE CONFIGURATION
 baseurl: ''  #leave this alone
-url: "https://africabookculture.github.io/"   #change this to yours
-repository: africabookculture/africabookculture.github.io
+url: "https://www.africabookculture.org/"   #change this to yours
+repository: africabookculture/web
 # twitter_username: pageboy  #change to your own twitter account
 lang: en_gb
 timezone: UTC
