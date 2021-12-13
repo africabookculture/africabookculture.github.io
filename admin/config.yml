@@ -242,24 +242,82 @@ collections:
         widget: "hidden"
         default: "page"
 
-  # uncomment out the following collection block if you want to use a home page rather than the blog on the home page. This needs to be done after you have changed the settings in the _config.yml file in the root of your project. DO NOT UNCOMMENT this paragraph!
-
-  - name: "homepageitems"
-    label: "Home Page Blocks" # Used in the UI
-    label_singular: "Block"
-    description: "There are 2 blocks on the home page. Left is an abreviated about text and right is the credits and acknowledgements"
-    folder: "_homepageitems/" # The path to the folder where the documents are stored
-    create: false # Allow users to create new documents in this collection
-    delete: false
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    media_folder: "/uploads"
-    public_folder: "../uploads"
+  - name: "britishpublications_1900-1970"
+    label: "British Publications 1900-1970" # Used in the UI
+    description: "These entries come from the database (spreadsheet) Publications About Africa by British Publishers 1900-1970"
     editor:
       preview: false
-    fields: # The fields for each document, usually in front matter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+    files:
+      - label: British Publications 1900-1970 Data
+      - name: "items"
+      - file: "_data/britishpublications_1900-1970.yml"
+      - fields:
+          - label: "Data Items"
+          - name: "items"
+          - widget: "list"
+          - fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Secondary Title",
+                  name: "secondary_title",
+                  widget: "string",
+                }
+              - { label: "Reference", name: "reference_id", widget: "number" }
+              - {
+                  label: "Reference Type",
+                  name: "reference_type",
+                  widget: "string",
+                }
+              - { label: "Author", name: "author", widget: "string" }
+              - {
+                  label: "Ethnicity",
+                  name: "ethnicity_of_author",
+                  widget: "string",
+                }
+              - { label: "Year", name: "Year of Publication", widget: "number" }
+              - { label: "Volume", name: "volume", widget: "string" }
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Pages", name: "pages", widget: "string" }
+              - { label: "Publisher", name: "publisher", widget: "string" }
+              - {
+                  label: "Co-Publisher",
+                  name: "co-publisher",
+                  widget: "string",
+                }
+              - { label: "Type of Publisher", name: "type", widget: "string" }
+              - {
+                  label: "Type of Publications by this Publisher",
+                  name: "type_of_publications",
+                  widget: "string",
+                }
+              - {
+                  label: "Place Published",
+                  name: "place_published",
+                  widget: "string",
+                }
+              - {
+                  label: "Place Published 2",
+                  name: "place_published2",
+                  widget: "string",
+                }
+              - { label: "Web Address", name: "url", widget: "string" }
+              - {
+                  label: "Digital Object Identifier",
+                  name: "doi",
+                  widget: "string",
+                }
+              - {
+                  label: "Keywords",
+                  name: "keywords",
+                  widget: "string",
+                  hint: "List items seperated with a comma.",
+                }
+              - {
+                  label: "Name of Database",
+                  name: "name_of_database",
+                  widget: "string",
+                }
+              - { label: "Abstract", name: "body", widget: "markdown" }
 
   - label: "Settings"
     name: "data"
