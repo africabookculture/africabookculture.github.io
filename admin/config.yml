@@ -242,9 +242,11 @@ collections:
         widget: "hidden"
         default: "page"
 
-  - name: "britishpublications_aboutafrica"
-    label: "British Publications 1900-1970" # Used in the UI
+  - label: "British Publications 1900-1970" # Used in the UI
+    name: "britishpublications_aboutafrica"
     description: "These entries come from the database (spreadsheet) Publications About Africa by British Publishers 1900-1970"
+    create: true # Allow users to create new entries in this collection
+    delete: true
     editor:
       preview: false
     files:
