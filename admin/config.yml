@@ -306,12 +306,7 @@ collections:
                   name: "doi",
                   widget: "string",
                 }
-              - {
-                  label: "Keywords",
-                  name: "keywords",
-                  widget: "string",
-                  hint: "List items seperated with a comma.",
-                }
+              - { label: "Keywords", name: "keywords", widget: "string" }
               - {
                   label: "Name of Database",
                   name: "name_of_database",
