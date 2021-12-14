@@ -242,13 +242,13 @@ collections:
         widget: "hidden"
         default: "page"
 
-  - name: "britishpublications_1900-1970"
+  - name: "britishpublications_aboutafrica"
     label: "British Publications 1900-1970" # Used in the UI
     description: "These entries come from the database (spreadsheet) Publications About Africa by British Publishers 1900-1970"
     editor:
       preview: false
     files:
-      - name: "publications_data"
+      - name: "britishpublications_1900-1970"
         label: "British Publications 1900-1970 Data"
         file: "_data/britishpublications_1900-1970.yml"
         fields:
