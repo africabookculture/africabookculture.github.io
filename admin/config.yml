@@ -249,8 +249,8 @@ collections:
       preview: false
     files:
       - label: "British Publications 1900-1970 Data"
-        name: "britishpublications_1900-1970"
-        file: "_data/britishpublications_1900-1970.yml"
+        name: "britishpublications"
+        file: "_data/britishpublications.yml"
         fields:
           - label: "Data Items"
             name: "items"
