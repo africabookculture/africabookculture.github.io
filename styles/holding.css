@@ -8,6 +8,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; */
+  background-color: rgb(177, 166, 155);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -28,9 +29,10 @@ img {
 }
 
 h1 {
+  font-size: 1rem;
   margin: 8px 0 4px 0;
   color: white;
-  background-color: rgba(35, 77, 252, 0.7);
+  background-color: rgb(90, 65, 36);
   padding: 8px;
 }
 
