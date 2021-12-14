@@ -248,8 +248,8 @@ collections:
     editor:
       preview: false
     files:
-      - label: British Publications 1900-1970 Data
-      - name: "items"
+      - label: "British Publications 1900-1970 Data"
+      - name: "publications_data"
       - file: "_data/britishpublications_1900-1970.yml"
       - fields:
           - label: "Data Items"
@@ -274,7 +274,7 @@ collections:
                   name: "ethnicity_of_author",
                   widget: "string",
                 }
-              - { label: "Year", name: "Year of Publication", widget: "number" }
+              - { label: "Year of Publication", name: "year", widget: "number" }
               - { label: "Volume", name: "volume", widget: "string" }
               - { label: "Number", name: "number", widget: "string" }
               - { label: "Pages", name: "pages", widget: "string" }
