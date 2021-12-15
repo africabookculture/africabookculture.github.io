@@ -1,22 +1,22 @@
 items:
-  - body: Rubbish rubish
-    pages: "89"
-    number: "8"
-    type_of_publications: all sorts
-    keywords: me, you, others
-    author: fred
-    secondary_title: hello again
-    reference_type: htio
-    url: https:/whatho.org
-    reference_id: 958850
-    name_of_database: grober
-    ethnicity_of_author: no
-    place_published: Oxford
-    title: hello
-    volume: "5"
-    type: anything
-    co-publisher: xcotrg
-    publisher: our
-    place_published2: Headington
-    year: 1968
-    doi: "678"
+  - reference_id: 1
+    title: Carte Administrative
+    secondary_title: 1. Annexe En Afrique Equatoriale de IGN,
+    reference_type: Map
+    author: 
+    year: 1963
+    volume: 
+    number: 
+    pages: 
+    publisher: 
+    co-publisher: 
+    type: 
+    type_of_publications: General Books about Africa
+    ethnicity_of_author:
+    place_published: S.l.
+    place_published2: 
+    url: Link to the original card catalogue http://purl.ox.ac.uk/mmid/map38186
+    doi: 
+    keywords: Congo (Democratic Republic) Maps., Maps.
+    abstract: 
+    name_of_database: Oxford University
