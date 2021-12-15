@@ -2,7 +2,7 @@ backend:
   name: github
   repo: africabookculture/web # Path to your GitHub repository
   branch: master # Branch to update (master by default)
-  site_domain: africabookculture.org #Your site on netlify
+  site_domain: africabookculture.netlify.app #Your site on netlify
   use_graphql: true
 
 publish_mode: editorial_workflow
