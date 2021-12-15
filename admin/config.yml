@@ -257,8 +257,8 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - { label: "Reference", name: "reference_id", widget: "number" }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Reference", name: "reference_id", widget: "number" }
               - {
                   label: "Secondary Title",
                   name: "secondary_title",
