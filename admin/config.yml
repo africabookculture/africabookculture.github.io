@@ -257,6 +257,7 @@ collections:
             name: "items"
             widget: "list"
             fields:
+              - { label: "Reference", name: "reference_id", widget: "number" }
               - { label: "Title", name: "title", widget: "string" }
               - {
                   label: "Secondary Title",
@@ -264,7 +265,6 @@ collections:
                   widget: "string",
                   required: false,
                 }
-              - { label: "Reference", name: "reference_id", widget: "number" }
               - {
                   label: "Reference Type",
                   name: "reference_type",
