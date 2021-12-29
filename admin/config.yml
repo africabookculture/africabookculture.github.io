@@ -241,138 +241,105 @@ collections:
         widget: "hidden"
         default: "page"
 
-  - label: "British Publications 1900-1970" # Used in the UI
+  - label: "British Publications about Africa 1900-1970" # Used in the UI
+    label_singular: "British Publication about Africa"
     name: "britishpublications_aboutafrica"
     description: "These entries come from the database (spreadsheet) Publications About Africa by British Publishers 1900-1970"
-    create: true # Allow users to create new entries in this collection
-    delete: true
+    folder: "_about _africa_british_publishers_1900-1970" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    delete: false
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    media_folder: "/uploads"
+    public_folder: "../uploads"
     editor:
       preview: false
-    files:
-      - label: "British Publications 1900-1970 Data"
-        name: "britishpublications"
-        file: "_data/britishpublications.yml"
-        fields:
-          - label: "Data Items"
-            name: "items"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Reference", name: "reference_id", widget: "number" }
-              - {
-                  label: "Secondary Title",
-                  name: "secondary_title",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Reference Type",
-                  name: "reference_type",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Author",
-                  name: "author",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Ethnicity",
-                  name: "ethnicity_of_author",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Year of Publication",
-                  name: "year",
-                  widget: "number",
-                  required: false,
-                }
-              - {
-                  label: "Volume",
-                  name: "volume",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Number",
-                  name: "number",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Pages",
-                  name: "pages",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Publisher",
-                  name: "publisher",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Co-Publisher",
-                  name: "co-publisher",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Type of Publisher",
-                  name: "type",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Type of Publications by this Publisher",
-                  name: "type_of_publications",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Place Published",
-                  name: "place_published",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Place Published 2",
-                  name: "place_published2",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Web Address",
-                  name: "url",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Digital Object Identifier",
-                  name: "doi",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Keywords",
-                  name: "keywords",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Name of Database",
-                  name: "name_of_database",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Abstract",
-                  name: "body",
-                  widget: "markdown",
-                  required: false,
-                }
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Reference", name: "reference_id", widget: "number" }
+      - {
+          label: "Secondary Title",
+          name: "secondary_title",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Reference Type",
+          name: "reference_type",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Author", name: "author", widget: "string", required: false }
+      - {
+          label: "Ethnicity",
+          name: "ethnicity_of_author",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Year of Publication",
+          name: "year",
+          widget: "number",
+          required: false,
+        }
+      - { label: "Volume", name: "volume", widget: "string", required: false }
+      - { label: "Number", name: "number", widget: "string", required: false }
+      - { label: "Pages", name: "pages", widget: "string", required: false }
+      - {
+          label: "Publisher",
+          name: "publisher",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Co-Publisher",
+          name: "co-publisher",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Type of Publisher",
+          name: "type",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Type of Publications by this Publisher",
+          name: "type_of_publications",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Place Published",
+          name: "place_published",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Place Published 2",
+          name: "place_published2",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Web Address", name: "url", widget: "string", required: false }
+      - {
+          label: "Digital Object Identifier",
+          name: "doi",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Keywords",
+          name: "keywords",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Name of Database",
+          name: "name_of_database",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Abstract", name: "body", widget: "markdown", required: false }
 
   - label: "Settings"
     name: "data"
