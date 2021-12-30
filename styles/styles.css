@@ -1602,3 +1602,18 @@ a.word {
     column-count: 2;
   }
 }
+
+html {
+  padding-bottom: 60px;
+}
+
+body#datatable #page-content {
+  display: block;
+  padding: 0;
+}
+
+body#datatable #page-content p,
+body#datatable #page-content h2,
+body#datatable #page-content header {
+  padding: 0 23%;
+}

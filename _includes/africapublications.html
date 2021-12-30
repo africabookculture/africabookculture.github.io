@@ -1,0 +1,33 @@
+<script>
+  $(document).ready(function () {
+    $("#africapublications").DataTable({
+      ajax: "/tabledata/africapublications.json",
+      stateSave: true,
+      lengthMenu: [
+        [10, 25, 50, -1],
+        [10, 25, 50, "All"],
+      ],
+      columns: [
+        { data: "Reference ID" },
+        { data: "Reference type" },
+        { data: "Author" },
+        { data: "Year" },
+        { data: "Title" },
+        { data: "Secondary Title" },
+        { data: "Volume" },
+        { data: "Number" },
+        { data: "Pages" },
+        { data: "Publisher" },
+        { data: "Co-publisher" },
+        { data: "Type" },
+        { data: "Place Published" },
+        { data: "Place published 2" },
+        { data: "URL" },
+        { data: "DOI" },
+        { data: "Keywords" },
+        { data: "Abstract" },
+        { data: "Name of Database" },
+      ],
+    });
+  });
+</script>

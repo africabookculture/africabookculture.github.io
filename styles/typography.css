@@ -205,3 +205,30 @@ li.active {
     width: 100%;
   }
 }
+
+table.dataTable {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.5rem;
+}
+
+table.dataTable td {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  border-collapse: collapse;
+  padding: 2px !important;
+}
+
+.dataTables_wrapper {
+  width: 80%;
+  margin: 1rem auto;
+}
